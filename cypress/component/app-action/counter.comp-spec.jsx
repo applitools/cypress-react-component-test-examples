@@ -12,6 +12,8 @@ describe('Counter with app action', () => {
       .contains('count: 1')
       .click()
       .contains('count: 2')
+    
+    cy.eyesCheckWindow()
   })
 
   it('allows access via reference', () => {
@@ -32,5 +34,6 @@ describe('Counter with app action', () => {
 
     // the UI should update to reflect the new count
     cy.contains('count: 101').should('be.visible')
+    cy.eyesCheckWindow()
   })
 })

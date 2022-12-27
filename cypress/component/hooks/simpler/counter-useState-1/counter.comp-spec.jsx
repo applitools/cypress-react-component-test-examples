@@ -9,5 +9,7 @@ describe('basic useState hook', () => {
     cy.contains('Click me').click().click().click()
 
     cy.contains('You clicked 3 times')
+
+    cy.eyesCheckWindow()
   })
 })

@@ -14,5 +14,7 @@ describe('reactive-state Counter', () => {
     cy.contains('.count', '0').click().click().click()
 
     cy.contains('.count', '3')
+
+    cy.eyesCheckWindow()
   })
 })

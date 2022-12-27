@@ -13,7 +13,11 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+
+/// <reference types="@applitools/eyes-cypress" />
+
 // Import commands.js using ES2015 syntax:
+import '@applitools/eyes-cypress/commands'
 import './commands'
 import '@testing-library/cypress/add-commands'
 import 'cypress-real-events/support'
@@ -42,3 +46,12 @@ Cypress.Commands.add('mount', mount)
 
 // Example use:
 // cy.cy.mount(<MyComponent />)
+
+
+beforeEach(function() {
+  cy.eyesOpen({appName: 'applitools-cypress-components-example', testName: this.currentTest.title})
+})
+
+afterEach(function() {
+  cy.eyesClose()
+})

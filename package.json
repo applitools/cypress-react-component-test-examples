@@ -78,6 +78,7 @@
     ]
   },
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.27.9",
     "@testing-library/cypress": "9.0.0",
     "@types/faker": "6.6.8",
     "@types/ramda": "0.28.20",
